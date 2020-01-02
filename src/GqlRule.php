@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Edgeteq\Component\GqlUtils\Rule;
+namespace Grzesie2k\PHPStan\GraphQL;
 
 use GraphQL\Error\SyntaxError;
 use GraphQL\Language\Parser;
@@ -11,10 +11,14 @@ use GraphQL\Type\Schema;
 use GraphQL\Utils\BuildSchema;
 use GraphQL\Validator\DocumentValidator;
 use PhpParser\Node;
+use PhpParser\Node\Scalar\String_;
 use PHPStan\Analyser\Scope;
 use PHPStan\Rules\Rule;
 use PHPStan\ShouldNotHappenException;
 
+/**
+ * @implements Rule<String_>
+ */
 class GqlRule implements Rule
 {
     /**
@@ -36,13 +40,12 @@ class GqlRule implements Rule
 
     public function getNodeType(): string
     {
-        return Node\Scalar\String_::class;
+        return String_::class;
     }
-
 
     public function processNode(Node $node, Scope $scope): array
     {
-        if (!$node instanceof Node\Scalar\String_) {
+        if (!$node instanceof String_) {
             throw new ShouldNotHappenException();
         }
 
@@ -106,7 +109,7 @@ class GqlRule implements Rule
         }
     }
 
-    private function findConfigFile(string $dir, $level = 0): ?string
+    private function findConfigFile(string $dir, int $level = 0): ?string
     {
         $config = "{$dir}/{$this->configFileName}";
 

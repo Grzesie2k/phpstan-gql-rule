@@ -15,5 +15,17 @@
         "phpstan/phpstan": "^0.12.3"
     },
     "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.16"
+    },
+    "autoload": {
+        "psr-4": {
+            "Grzesie2k\\PHPStan\\GraphQL\\": "src/"
+        }
+    },
+    "scripts": {
+        "lint": [
+            "php-cs-fixer fix --dry-run",
+            "phpstan analyse src --level=max"
+        ]
     }
 }

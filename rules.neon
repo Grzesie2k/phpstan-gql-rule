@@ -1,2 +1,2 @@
 rules:
-    - Edgeteq\Component\GqlUtils\Rule\GqlRule
+    - Grzesie2k\PHPStan\GraphQL\GqlRule
