@@ -8,5 +8,5 @@ php composer.phar require --dev grzesie2k/php-stan-gql-rule
 and include rule in `phpstan.neon`:
 ```yaml
 includes:
-  - vendor/edgeteq/gql-utils/rules.neon
+  - vendor/grzesie2k/phpstan-gql-rule/rules.neon
 ```
