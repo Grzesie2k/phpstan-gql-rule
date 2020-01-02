@@ -1,0 +1,2 @@
+rules:
+    - Edgeteq\Component\GqlUtils\Rule\GqlRule

@@ -1,0 +1,19 @@
+{
+    "name": "grzesie2k/phpstan-gql-rule",
+    "description": "PHPStan rules for GraphQL",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Grzegorz Kielak",
+            "email": "grzegorz@kielak.me"
+        }
+    ],
+    "require": {
+        "ext-json": "*",
+        "webonyx/graphql-php": "^0.13.8",
+        "nikic/php-parser": "^4.3",
+        "phpstan/phpstan": "^0.12.3"
+    },
+    "require-dev": {
+    }
+}
