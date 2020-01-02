@@ -1,6 +1,7 @@
 {
     "name": "grzesie2k/phpstan-gql-rule",
     "description": "PHPStan rules for GraphQL",
+    "license": "MIT",
     "type": "library",
     "authors": [
         {
